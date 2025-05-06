@@ -22,6 +22,9 @@ class Counter:
 - **@classmethod**	    Method jo class ke saath kaam kare
 
 
+**@staticmethod**	    A method jo na class (cls) use karti hai, na object (self)
+
+
 class MyCounter:
     count = 0
 
@@ -42,3 +45,27 @@ Lekin **cls.count** achhi practice hai because:
 
 ### Public variables aur methods 
 - direct object ke through access ki ja sakti hain — koi restriction nahi hoti.
+
+### 🤔 Why use static method?
+- Jab aapko sirf logic run karna ho, bina object banaye
+- Jaise calculator functions: add, multiply, sqrt, etc.
+
+**Concept**	                **Explanation**
+- Static Method	            No self, no cls
+- Call style	           ClassName.method_name()
+- Use case	                General-purpose helper functions
+
+**Name mangling** is Python’s way of protecting private variables by changing their names internally.
+
+- When you create a variable with double underscores like **__ssn**, Python mangles its name to something like:
+
+**_Employee__ssn**
+- So it cannot be accessed directly from outside the class.
+
+### Name mangling only applies when:
+- Variable name starts with two underscores __
+- And does not end with two underscores (like __init__ is NOT mangled)
+
+- Name mangling changes **__ssn** to **_ClassName__ssn** to make it harder to access from outside.
+
+
