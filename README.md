@@ -22,13 +22,13 @@ class Counter:
 - **@classmethod**	    Method jo class ke saath kaam kare
 
 
-**class MyCounter:**
-    *count = 0*
+class MyCounter:
+    count = 0
 
-    **@classmethod**
-    **def show(cls):**
-        **print(cls.count)**     ✅ still works
-        **print(Counter.count)** ❌ error (name doesn't exist anymore)
+    @classmethod
+    def show(cls):
+        print(cls.count)   ✅ still works
+       print(Counter.count) ❌ error (name doesn't exist anymore)
 
 
 ### Conclusion:
@@ -39,3 +39,6 @@ Lekin **cls.count** achhi practice hai because:
 - Code reusable banta hai
 - Class ka naam change ho toh code toot'ta nahi
 - Inheritance ke case mein sahi class ke saath kaam karta hai
+
+### Public variables aur methods 
+- direct object ke through access ki ja sakti hain — koi restriction nahi hoti.
