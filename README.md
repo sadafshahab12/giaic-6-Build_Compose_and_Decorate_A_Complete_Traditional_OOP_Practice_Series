@@ -21,6 +21,22 @@ class Counter:
 - **cls**	              Class khud
 - **@classmethod**	    Method jo class ke saath kaam kare
 
+### @price.setter def price(self, value):
+
+- Ye setter method hai jo _price ki value update karta hai.
+- Isme ek validation bhi hai: agar aap negative price set karte hain to error raise hota hai.
+
+### @price.deleter def price(self):
+
+- Ye deleter method hai jo _price attribute ko delete karta hai.
+- Jab del product.price likha jata hai, to yeh method call hota hai aur price delete ho jata hai.
+
+- Getter: Hum @property se kisi attribute ko easily access kar lete hain bina directly _price ko access kiye.
+
+- Setter: Hum @property.setter se us attribute ko update karte hain.
+
+- Deleter: Hum @property.deleter se attribute ko delete karte hain.
+
 
 **@staticmethod**	    A method jo na class (cls) use karti hai, na object (self)
 
@@ -140,3 +156,25 @@ Decorator ek function hota hai jo kisi doosray function ke **behavior ko change*
 
 - Ye getter method hai jo _price ko return karta hai.
 - Jab aap product.price likhte hain, to internally yeh @property decorator call hota hai, aur _price value return hoti hai.
+
+### 🔹 __call__() method:
+- Jab aap kisi object ko function ki tarah call karte hain (jaise obj()), to Python __call__() method ko call karta hai.
+
+### 🔹 callable() function:
+- Ye Python ka built-in function hai jo batata hai ke koi cheez (function, object, class) call ki ja sakti hai ya nahi.
+
+- m = Multiplier(5)	m.factor = 5 set ho gaya
+- callable(m)	True aayega, kyunki __call__() defined hai
+- m(10)	Python actually m.__call__(10) run karta hai
+- m(10) = 10 * 5 = 50	
+
+### 🟢 Easy Samjhaana:
+- __call__() likhne se object function ban jaata hai.
+- callable() se check kar sakte hain ki object function ki tarah call ho sakta hai ya nahi.
+  
+### 🔹 class InvalidAgeError(Exception):
+- Yahan hum Python ki built-in Exception class ko inherit karke apna custom error bana rahe hain.
+- Ab jab bhi aapko specific error dikhani ho, aap ye custom error use kar sakte ho.
+
+
+
