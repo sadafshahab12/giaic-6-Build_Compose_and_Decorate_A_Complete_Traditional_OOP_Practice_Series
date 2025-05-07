@@ -176,5 +176,24 @@ Decorator ek function hota hai jo kisi doosray function ke **behavior ko change*
 - Yahan hum Python ki built-in Exception class ko inherit karke apna custom error bana rahe hain.
 - Ab jab bhi aapko specific error dikhani ho, aap ye custom error use kar sakte ho.
 
+### ✅ self.start
+- Yeh original starting value ko store karta hai.
+- Isse aapko hamesha pata hota hai ke count kis number se shuru hua tha.
+
+### ✅ self.current
+- Yeh actual iteration ke liye use hota hai.
+- Har __next__() call par ye decrease hota hai (self.current -= 1)
+- Jab yeh 0 se neeche chala jata hai, tab StopIteration raise hota hai.
+
+
+__iter__() ➜ Iterator banata hai
+__next__() ➜ Next value return karta hai, aur jab khatam ho jaye to StopIteration deta hai
+- __iter__	Returns self, kyunki yahi object iterate karega
+- __next__	Har baar next value return karta hai, jab tak 0 tak na pahuch jaye
+- StopIteration	Ye batata hai ke iteration khatam ho gaya
+
+- self.current	For-loop ke liye counting karta hai (dynamic)
+
+
 
 
